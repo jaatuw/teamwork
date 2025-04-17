@@ -6,22 +6,34 @@
     <link rel="stylesheet" href="sketch.css" />
     <title>sketch</title>
     <script src="sketch.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <header id="title"><h1>Etch-a-sketch</h1></header>
     <div class="main">
-        <div class="wrapper">
-            <div class="grid"></div>
-              <script>
-                createDivs(16);
-              </script>
-              <div class="settings">
-                <button id="color">Color</button>
-                <button id="rainbow">Rainbow</button>
-                <button id="eraser">Eraser</button>
-                <button id="clear">Clear</button>
-            </div>
+      <div class="wrapper">
+        <div class="grid"></div>
+        <div class="settings">
+          <input type="color" id="colorpick" value="#000000">
+          <button onclick="color()">Color</button>
+          <button onclick="rainbow()">Rainbow</button>
+          <button onclick="erase()">Eraser</button>
+          <button onclick="clearGrid()">Clear</button>
+          <div class="slidecontainer">
+            <p id="sliderValue">40</p>
+            <input
+              type="range"
+              min="10"
+              max="100"
+              value="50"
+              class="slider"
+              id="myRange"
+            />
+          </div>
         </div>
+      </div>
     </div>
   </body>
 </html>
