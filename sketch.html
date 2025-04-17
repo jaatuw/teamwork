@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sketch.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sketch.css" />
     <title>sketch</title>
-</head>
-<body>
-    teste 2
-</body>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+    <header id="title"><h1>Etch-a-sketch</h1></header>
+    <div class="main">
+        <div class="wrapper">
+            <div class="grid"></div>
+              <script>
+                createDivs(16);
+              </script>
+              <div class="settings">
+                <button id="color">Color</button>
+                <button id="rainbow">Rainbow</button>
+                <button id="eraser">Eraser</button>
+                <button id="clear">Clear</button>
+            </div>
+        </div>
+    </div>
+  </body>
 </html>
